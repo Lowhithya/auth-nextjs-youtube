@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast, { Toaster, ToastBar } from "react-hot-toast";
@@ -12,8 +12,8 @@ export default function SignupPage() {
         password: "",
         username: "",
     })
-    const [buttonDisabled, setButtonDisabled] = React.useState(false);
-    const [loading, setLoading] = React.useState(false)
+    const [buttonDisabled, setButtonDisabled] = useState(false);
+    const [loading, setLoading] = useState(false)
     // On Signing Up
     const onSignUp = async () => {
         try {

@@ -4,11 +4,11 @@ import axios from "axios"
 
 import toast from "react-hot-toast";
 import { useRouter, } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function ProfilePage() {
-    const [data, setData] = React.useState("nothing")
+    const [data, setData] = useState("nothing")
     const router = useRouter()
     const logout = async () => {
         try {
